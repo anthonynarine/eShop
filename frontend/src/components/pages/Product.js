@@ -1,35 +1,39 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { Link,  useNavigate } from "react-router-dom";
 import { Card, CardMedia, CardActions, CardContent, Button, Typography } from '@mui/material'
-
-
-
 
 
 function Product({ product }) {
 
+  // let navigate = useNavigate();
+
+  // let navigator = ()=> {
+  //   navigate(`/products/${product._id}`)
+  // };
+  
   return (
     <Card sx={{ maxWidth: 345 }}>
     <CardMedia
-      sx={{ height: 140 }}
+      sx={{ height: 240 }}
       image={product.image}
       title="product"
     />
     <CardContent>
-      <Link  ><Typography gutterBottom variant="subtitle2" component="div">
+    <Typography gutterBottom variant="subtitle2" component="div">
         {product.name}
-      </Typography></Link>
+      </Typography>
       <Typography variant="body2" color="text.secondary">
-        Lizards are a widespread group of squamate reptiles, with over 6,000
-        species, ranging across all continents except Antarctica
+        {product.rating} from {product.numReviews}
+      </Typography>
+      <Typography sx={{marginTop:3}} variant="h6" color="black">
+        ${product.price} 
       </Typography>
     </CardContent>
-    <CardActions>
-      <Button size="small">Share</Button>
-      <Button size="small">Learn More</Button>
-    </CardActions>
+
   </Card>
   )
 }
 
 export default Product
+
+
