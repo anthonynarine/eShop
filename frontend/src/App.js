@@ -1,5 +1,8 @@
+import HomePage from './components/pages/HomePage';
+
 import Header from './components/ui/Header';
-import './App.css';
+import Footer from './components/ui/Footer';
+
 import { Typography, Box, Stack, Container } from '@mui/material';
 
 
@@ -18,29 +21,16 @@ const appStyling = {
 
 
 
-
-// .App-header {
-//   background-color: #282c34;
-//   min-height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   font-size: calc(10px + 2vmin);
-//   color: white;
-// }
-
 function App() {
   return (
     <Box>
       <Header/>
       <main >
         <Container>
-
-        <Typography variant='h1' >Welcome</Typography>
+          < HomePage />
         </Container>
       </main>
-      <Header/>
+      <Footer/>
     </Box>
 
   );
