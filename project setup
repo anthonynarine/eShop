@@ -1,0 +1,21 @@
+setup 
+
+pip install virtualenv
+
+virtualenv <enviroment name?
+
+activate eshopenv\scripts\activate
+
+backend:
+    pip install django
+    django start project < project_name . >
+
+    python manage.py startapp  <app_name>
+
+    register app in project settings.py under INSTALLED_APPS
+
+
+URL and Routing configurations
+create url.py file (used to connect the views to your urls )
+create url and view (see hello world sample)
+include app url in project urls

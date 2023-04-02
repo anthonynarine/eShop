@@ -1,2 +1,2 @@
 # eShop
-This projects backend is built with python, django rest_framework, and SQLite. The front end is built with react and styled with MUI.
+This projects was built using python, django rest_framework and SQLite for the backend API. The front end was built was react and styled with MUI
