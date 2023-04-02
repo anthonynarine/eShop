@@ -1,0 +1,4 @@
+
+
+ThemeProvider must wrap the App component in index.js
+inport theme and pass it as props to ThemeProvier
