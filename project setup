@@ -19,3 +19,13 @@ URL and Routing configurations
 create url.py file (used to connect the views to your urls )
 create url and view (see hello world sample)
 include app url in project urls
+
+install djangorestframework. 
+https://www.django-rest-framework.org/#installation
+
+add rest_framework to installed apps in project setting
+
+https://www.django-rest-framework.org/api-guide/views/#function-based-views
+import into views.py - from rest_framework.decorators import api_view
+import Response as well ---
+from rest_framework.response import Response
