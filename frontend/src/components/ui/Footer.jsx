@@ -8,12 +8,14 @@ import {
   InputBase,
   Badge,
   Button,
+  Paper
 } from "@mui/material";
 
 
 let StyledToolbar = styled(Toolbar)({
   display: "flex",
   justifyContent: "center",
+  height:"80px",
 });
 
 
@@ -21,9 +23,9 @@ function Footer() {
   return (
     <AppBar position="sticky">
       <StyledToolbar>
-        <Typography variant="caption" sx={{ display: { xs: "none", sm: "block" } }}>
+        <Paper sx={{backgroundColor: "#353A40", color:"white"}} elevation={24}><Typography variant="caption" sx={{ display: { xs: "none", sm: "block" } }}>
           Copyright<span> &copy;</span> eShop
-        </Typography>
+        </Typography></Paper>
       </StyledToolbar>
     </AppBar>
   );
