@@ -30,7 +30,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/product/:id/" element={<ProductDetailPage />} />
+            <Route path="/products/:id/" element={<ProductDetailPage />} />
           </Routes>
         </Container>
       </main>

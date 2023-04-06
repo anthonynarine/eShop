@@ -15,8 +15,10 @@ function HomePage() {
     // console.log("useEffect triggered")
     async function fetchProducts() {
       try {
+        //data is destructured 
         let { data } = await axios.get("http://localhost:8000/api/products/");
         console.log("DATA", data);
+        //setter function caled up update state
         setProducts(data);
       } catch (error) {
         console.log(error);
