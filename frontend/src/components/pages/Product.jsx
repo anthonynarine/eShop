@@ -6,9 +6,9 @@
 
 import React from "react";
 import {useNavigate } from "react-router-dom";
-import {Card,CardMedia,CardActions,CardContent,Button,Typography,} from "@mui/material";
+import {Card,CardMedia,CardContent,Typography,} from "@mui/material";
 import StarRating from "../ui/Rating";
-import { BrightnessLow } from "@mui/icons-material"
+
 
 const CardStyles = {
   card: {

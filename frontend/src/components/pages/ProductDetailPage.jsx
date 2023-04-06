@@ -1,13 +1,21 @@
+import { useParams } from "react-router-dom";
+import { Breadcrumbs } from "@mui/material";
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import products from "../../products";
 
-
-import React from 'react'
 
 function ProductDetailPage() {
+
+  let { id } = useParams();
+  console.log(id)
+
+  let product = products.find((p)=> p._id === id)
+
   return (
     <div>
-      product detail page under construction
+      {id}
     </div>
-  )
+  );
 }
 
-export default ProductDetailPage
+export default ProductDetailPage;

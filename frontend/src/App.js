@@ -6,6 +6,7 @@ import Header from "./components/ui/Header";
 import Footer from "./components/ui/Footer";
 
 import { Typography, Box, Stack, Container } from "@mui/material";
+import LoginPage from "./components/pages/LoginPage";
 
 //FORM STYLE START\\
 const appStyling = {
@@ -28,7 +29,8 @@ function App() {
         <Container>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/product" element={<ProductDetailPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/product/:id/" element={<ProductDetailPage />} />
           </Routes>
         </Container>
       </main>

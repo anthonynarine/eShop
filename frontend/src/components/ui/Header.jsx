@@ -1,15 +1,7 @@
+import {AppBar,Box,Toolbar,Typography,styled,InputBase,Badge,Button,} from "@mui/material";
+import { Storefront, ShoppingCart, } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 import React from "react";
-import {
-  AppBar,
-  Box,
-  Toolbar,
-  Typography,
-  styled,
-  InputBase,
-  Badge,
-  Button,
-} from "@mui/material";
-import { Storefront, ShoppingCart, Person } from "@mui/icons-material";
 
 let StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -31,6 +23,13 @@ let Icons = styled(Box)(({ theme }) => ({
 }));
 
 function Header() {
+
+    let navigate = useNavigate();
+  
+    let navigateTo = ()=> {
+      navigate("/login")
+    };
+
   return (
     <AppBar position="sticky">
       <StyledToolbar>
@@ -45,7 +44,7 @@ function Header() {
           <Badge sx={{marginTop:1.2}}badgeContent={2} color="error">
             <ShoppingCart />
           </Badge>
-        <Button  sx={{color:"white"}} >Login</Button>
+        <Button onClick={navigateTo}  sx={{color:"white"}} >Login</Button>
         </Icons>
       </StyledToolbar>
     </AppBar>
