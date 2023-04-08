@@ -4,12 +4,12 @@
 // the body of the useEffect to store the data in the product state value.
 // the state value will be rendered as needed
 
-import { useParams, useNavigate } from "react-router-dom";
 import { Typography,styled, Button, Grid, List, ListItem,Paper} from "@mui/material";
-import { useState, useEffect } from "react";
 import ChevronLeftSharpIcon from "@mui/icons-material/ChevronLeftSharp";
-
+import { useParams, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import StarRating from "./Rating";
+import React from "react";
 import axios from "axios";
 
 let BackButton = styled(Button)({
@@ -24,10 +24,21 @@ let BackButton = styled(Button)({
   variant: "contained",
 });
 
+let DescriptionPaper = styled(Paper)({
+  boxShadow: "5px 5px 10px #ccc",
+  ":hover":{
+    boxShadow: "10px 10px 20px #060606",
+    "&:hover": {
+      backgroundColor: "#ccc",
+      color: "#1f2124",
+    },
+  }  
+});
+
 let AddToCartBtn = styled(Button)({
   paddingTop: 3,
   width:"70%",
-  backgroundColor:"#353A40",
+  backgroundColor:"#1f2124",
   paddingBottom: 4,
   fontSize: 15,
   fontWeight: "normal",
@@ -66,8 +77,10 @@ function ProductDetailPage() {
     fetchProduct();
   }, []);
 
+
+
   return (
-    <>
+    <React.Fragment>
       <BackButton
         startIcon={<ChevronLeftSharpIcon />}
         varient="contained"
@@ -75,6 +88,7 @@ function ProductDetailPage() {
       >
         Go Back
       </BackButton>
+
       <Grid container spacing={3}>
         <Grid item xs={6}>
           {/* <Paper elevation={24}> */}
@@ -101,28 +115,31 @@ function ProductDetailPage() {
               </Typography>
             </ListItem>
             <ListItem>
-              <Paper elevation={5} sx={{padding:1.5}}><Typography>
+              <Typography>
                 <strong>Description:</strong> {product.description}
-              </Typography></Paper>
+              </Typography>
             </ListItem>
           </List>
           {/* </Paper> */}
         </Grid>
+
         <Grid item xs="none" md={3}>
           <List sx={{ width: "100%" }}>
             <ListItem>
               <Typography>
                 <strong>Status: </strong>
+{/* if the product count is 0 render in stock if it's less than 0 render out of stock */}
                 {product.countInStock > 0 ? "in Stock" : "Out Of Stock"}
               </Typography>
             </ListItem>
             <ListItem>
-              <AddToCartBtn>add to cart</AddToCartBtn>
+{/* if the prodcut count is 0 disabled is true */}
+              <AddToCartBtn disabled={product.countInStock === 0} >add to cart</AddToCartBtn>
             </ListItem>
           </List>
         </Grid>
       </Grid>
-    </>
+    </React.Fragment>
   );
 }
 
