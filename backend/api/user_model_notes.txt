@@ -1,0 +1,5 @@
+
+setup:
+
+in the model you what the User model to be associated with import  
+from djano.contrib.auth.models import User

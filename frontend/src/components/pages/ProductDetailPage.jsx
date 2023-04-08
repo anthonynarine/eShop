@@ -60,6 +60,8 @@ function ProductDetailPage() {
   let { id } = useParams();
   let navigate = useNavigate();
 
+
+  // useState + useEffect + useParams along with axios to fetch data for an individual product.
   const [product, setProduct] = useState([]);
 
   useEffect(() => {

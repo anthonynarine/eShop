@@ -8,6 +8,8 @@ import React from "react";
 import axios from "axios";
 
 function HomePage() {
+
+  //useState + useEffect along axios to get all products 
   const [products, setProducts] = useState([]);
 
   //useEffect effect will trigger ever single time the component loads
