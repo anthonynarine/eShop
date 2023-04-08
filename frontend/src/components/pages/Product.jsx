@@ -14,6 +14,7 @@ const CardStyles = {
   card: {
     maxWidth: 345,
     cursor: "pointer",
+    marginBottom: 4,
     borderRadius: 0,
     boxShadow: "5px 5px 10px #ccc",
     ":hover": {
