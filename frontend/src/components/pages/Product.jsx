@@ -6,8 +6,8 @@
 
 import React from "react";
 import {useNavigate } from "react-router-dom";
-import {Card,CardMedia,CardContent,Typography,} from "@mui/material";
-import StarRating from "../ui/Rating";
+import {Card,CardMedia,CardContent,Typography,Grid} from "@mui/material";
+import StarRating from "./Rating";
 
 
 const CardStyles = {
